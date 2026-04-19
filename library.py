@@ -65,3 +65,19 @@ import math
 today = datetime.now()
 print(today)
 print(today + timedelta(days=7))
+
+class Book:
+    def __init__(self, title, year, author, genre='Unknown'):
+        self.title = title
+        self.year = year
+        self.author = author
+        self.genre = genre
+        self.is_read = False
+
+    def mark_read(self):
+        self.is_read = True
+
+    def is_classic(self):
+        return self.year < 1950
+    
+book = Book("Robinson Crusoe", 1719, "Daniel Defoe", "Adventure")
