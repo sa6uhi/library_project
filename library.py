@@ -11,3 +11,7 @@ def create_book(title, year, author, genre='Unknown'):
 
 def is_classic(book):
     return book["year"] < 1950
+
+book1 = create_book("Robinson Crusoe", 1719, "Daniel Defoe", "Adventure")
+
+print(is_classic(book1))
