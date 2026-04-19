@@ -28,3 +28,8 @@ def remove_book(title):
             return
     print(f"Book {title} not found")
 
+def all_genres():
+    genres = set()
+    for book in library:
+        genres.add(book["genre"])
+    return genres
