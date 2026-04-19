@@ -54,3 +54,14 @@ try:
         library = json.load(file)
 except FileNotFoundError:
     print("No existing library found, starting with an empty library.")
+
+
+import os
+import sys
+# import datetime
+from datetime import datetime, timedelta
+import math
+
+today = datetime.now()
+print(today)
+print(today + timedelta(days=7))
