@@ -33,3 +33,12 @@ def all_genres():
     for book in library:
         genres.add(book["genre"])
     return genres
+
+classic_books = [book["title"] for book in library if is_classic(book)]
+
+authors = [book["author"] for book in library]
+
+def book_iterator(genre_filter=None):
+    for book in library:
+        if genre_filter is None or book["genre"] == genre_filter:
+            yield book
