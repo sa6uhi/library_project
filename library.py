@@ -15,3 +15,16 @@ def is_classic(book):
 book1 = create_book("Robinson Crusoe", 1719, "Daniel Defoe", "Adventure")
 
 print(is_classic(book1))
+
+library = []
+
+def add_book(book):
+    library.append(book)
+
+def remove_book(title):
+    for book in library:
+        if book["title"] == title:
+            library.remove(book)
+            return
+    print(f"Book {title} not found")
+
