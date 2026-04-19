@@ -81,3 +81,14 @@ class Book:
         return self.year < 1950
     
 book = Book("Robinson Crusoe", 1719, "Daniel Defoe", "Adventure")
+
+
+class EBook(Book):
+    def __init__(self, title, year, author, genre='Unknown', file_size=0):
+        super().__init__(title, year, author, genre)
+        self.file_size = file_size
+
+class AudioBook(Book):
+    def __init__(self, title, year, author, genre='Unknown', duration=0):
+        super().__init__(title, year, author, genre)
+        self.duration = duration
